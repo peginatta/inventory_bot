@@ -12,28 +12,20 @@ from google.oauth2.service_account import Credentials
 
 INVENTORY_FILE = "inventory.json"
 
-# Path to the service account key JSON you downloaded from Google Cloud
-SHEETS_CREDENTIALS_FILE = "labinventory-479611-51c71ef2b10e.json"
-
-# Spreadsheet ID (the long ID from your Google Sheets URL)
-# Example URL: https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
-SPREADSHEET_ID = "1sQ5mbiM4bwKcp6ocI78RJhyETaEGu37aoz6bqNG04h4"
-
 # Words that mean "inventory"
 INVENTORY_WORDS = {
     "inventory",
     "inv",
     "stock",
     "list",
-    "inventario",  # if you ever type in Spanish :)
+    "inventario",  # why not :)
 }
 
 # Aliases for item names
-# You can extend this dict as you like
 ITEM_ALIASES = {
     "sch": "schneider",
     "sh": "schneider",
-    # Add more if useful, e.g.:
+    # add more if useful, e.g.:
     # "dm": "dmem",
     # "rp": "rpmi",
 }
@@ -80,17 +72,35 @@ _gsheet = None  # will be initialized lazily
 def get_sheet():
     """
     Lazily initialize and return the first worksheet of the spreadsheet.
+    Uses GOOGLE_CREDS_JSON and SPREADSHEET_ID environment variables.
     """
     global _gsheet
     if _gsheet is not None:
         return _gsheet
 
-    creds = Credentials.from_service_account_file(
-        SHEETS_CREDENTIALS_FILE,
-        scopes=SCOPES,
-    )
+    creds_json = os.getenv("GOOGLE_CREDS_JSON")
+    if not creds_json:
+        raise RuntimeError(
+            "GOOGLE_CREDS_JSON environment variable is not set.\n"
+            "In Replit, add it in the Secrets panel (full JSON from your service account)."
+        )
+
+    try:
+        info = json.loads(creds_json)
+    except json.JSONDecodeError as e:
+        raise RuntimeError("GOOGLE_CREDS_JSON is not valid JSON.") from e
+
+    creds = Credentials.from_service_account_info(info, scopes=SCOPES)
     client = gspread.authorize(creds)
-    _gsheet = client.open_by_key(SPREADSHEET_ID).sheet1
+
+    spreadsheet_id = os.getenv("SPREADSHEET_ID")
+    if not spreadsheet_id:
+        raise RuntimeError(
+            "SPREADSHEET_ID environment variable is not set.\n"
+            "Set it to your Google Sheet ID."
+        )
+
+    _gsheet = client.open_by_key(spreadsheet_id).sheet1
     return _gsheet
 
 
@@ -356,7 +366,6 @@ if __name__ == "__main__":
     if not token:
         raise RuntimeError(
             "DISCORD_BOT_TOKEN environment variable is not set.\n"
-            "Example (Linux/macOS): export DISCORD_BOT_TOKEN='YOUR_TOKEN_HERE'\n"
-            "Example (PowerShell):  setx DISCORD_BOT_TOKEN 'YOUR_TOKEN_HERE'"
+            "In Replit, add it in Secrets. Locally, export it in your shell."
         )
     bot.run(token)
