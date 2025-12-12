@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "labinventory-479611",
+  "private_key_id": "51c71ef2b10ecdca829d0e0163ca79375df1d9d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCqqhDO7n1EzW0u\nA9QIuZ9sThuUegOn5qIt0X5fwYwPSfPwYsOGWThvBsfrqrstXuZuXb7Ta63aSmLT\nPb7FlkhyURqC7NfIVfVxpGX87jl1Fnjq4QIY8/fxHMtPAddkGFfPwrX7S2Ol5w6/\nkVZjVjNy7KxjANzZGkQxsASDUT+rc6hxN9UgCqVwVfp4q5ui8ppKp/yzqyO/a6jN\nhtmnieQvfV7DE+x0qEbcs0/Dt62GVrIrHCIkyW/3N9uhs7Q5wAu/M6KlIc9krolt\nzcGkd8JGanGhii459AW1FL0LWi/rs7D5jyYLffDDWdC+BP8+YS8dKNANBdg6x6/v\nGQ+m9I9PAgMBAAECggEACaqYSSA4+CyqgnC1EclxvjCuXzqJ+niVtwKmpcXQqQ0H\nRBZT/MgQ6jj4GeERuQAnDRlCNbdjoXmVH2Hf7FEWyWLOnZvMnQxBWq51GF5l4rvj\nHWqhM8idwope+ZqhGIpIbvwYUqNygXMU4sTYn8fCIkBFg1YJLELQmf/eQZHYiV1r\n/rDK9inb3+kMC6U3hg8IQuSanDj3z8mabgiPo7gQzn/W18GIPHl1g2A0SvbnnbaF\niPbLeFfz6H7xCwi+neJRs5mve7pjpRRSMolfI423y9Np8LXSga8qIbolQn35Vaut\nXUf5/kBTO39Iky+j+N7UVwaWZI1Ex8ErtVjOPuSUAQKBgQDUJ+a+zBlNpUYNNw7t\nmWa8Jr6U+0k96qFCIkLG9eni9IMyWIkZwOQWveiJX0r048y1yoMohnnNTv8ougwZ\nkVXm1dmEPyFxB7Xd2JxqsdpHQTwO1Wt5fvIgWJW7IVcw85Q958ZrvIlj/G8N/SS4\nhr3qKCCD/igPkKvDHRCgforRowKBgQDN7w4285w8ov+nalpBHynG1ch5UYPTknx0\nfLb9/CDLz+XxaNx6kFbPPDDd5dv91W0Se1Vb4n0ioE0Bqko/t8xhMWTwyKGD6sRO\na5E5Xd3NHuQOpp5779uQVZSYNweylHeEG1jHHsueuGYQ7Y0GIWAmwp+lxclHNvCm\n2oyZqVJeZQKBgQCuvzL7gydwYirCJdCg+lK5tXwTQKvCWSl8TLYOJW4Bp38NEAnV\ncaEt7jzEMf6Ombf7IRRJZAKdjmzzQdNHmANWgFyK5mkILd6qHYoxA8+UE3KBkV7W\nEy8iX3TtTvf/dRJsryUrhn7wIXPj5NfDOhDh9y1ZKxYaRAKGUsFoQPLc2wKBgQCL\n7XqYJjGsFglmxWIsS7OEUrEUlinf8fI06KUisVXLhyk0Ps9JTJhf2gNOU6iGsqWZ\nYEpg0+W5SHjqv74Ry57JD9oJrhnpW/UlX/veogRbIzlNJzQa/KERUsVUJFhLpIwN\nLNPHAQrUf3GC4Rbo6na9/5Kg/mLEy/T7Oxc8Ngws7QKBgQCcV/UGSh7cqQ9cReEa\n7Z3vFZUu3Yl4tFfYnoO6sBjTcBmjbGr2Zj7tcAu1e3PQSO++OxxJJbUl7/X9zeG2\n4Mr7kkRbb+rz3REaxqaLo/rC3lwoWvPjmW1IhSU6cWLHEGVKKSDMFgXq3CQVTdIW\nNw8JX+oL867VmGF+/GsANCvDCw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "labinventory@labinventory-479611.iam.gserviceaccount.com",
+  "client_id": "100495494385970022601",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/labinventory%40labinventory-479611.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
